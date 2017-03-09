@@ -17,32 +17,32 @@ together. See the references below for pointers.
 
 REFERENCES
 
-    https://www.ntpsec.org/white-papers/stratum-1-microserver-howto/
+<https://www.ntpsec.org/white-papers/stratum-1-microserver-howto/>
 
-    http://www.satsignal.eu/ntp/Raspberry-Pi-quickstart.html
+<http://www.satsignal.eu/ntp/Raspberry-Pi-quickstart.html>
 
-    http://ava.upuaut.net/?p=726
+<http://ava.upuaut.net/?p=726>
 
-    http://www.catb.org/gpsd/gpsd-time-service-howto.html
+<http://www.catb.org/gpsd/gpsd-time-service-howto.html>
 
-    https://www.eecis.udel.edu/~mills/ntp/html/refclock.html
+<https://www.eecis.udel.edu/~mills/ntp/html/refclock.html>
 
-    http://doc.ntp.org/4.1.0/ntpq.htm
+<http://doc.ntp.org/4.1.0/ntpq.htm>
 
-    http://www.linuxfromscratch.org/blfs/view/cvs/basicnet/ntp.html
+<http://www.linuxfromscratch.org/blfs/view/cvs/basicnet/ntp.html>
 
-    https://git.savannah.gnu.org/git/gpsd.git
+<https://git.savannah.gnu.org/git/gpsd.git>
 
-    https://github.com/ntp-project/ntp
+<https://github.com/ntp-project/ntp>
 
 CONTACT
 
-    Chip Overclock
-    mailto:coverclock@diag.com
-    Digital Aggregates Corporation
-    3440 Youngfield Street
-    Suite 209
-    Wheat Ridge CO 80033 USA
+Chip Overclock  
+<mailto:coverclock@diag.com>  
+Digital Aggregates Corporation  
+3440 Youngfield Street  
+Suite 209  
+Wheat Ridge CO 80033 USA  
 
 NOTES
 
