@@ -73,8 +73,6 @@ NOTES
         --enable-ATOM \
         --enable-linuxcaps
 
-    vi /lib/systemd/system/gpsd.service
-
     systemctl disable hciuart
     systemctl stop hciuart
     systemctl disable gpsd.socket
