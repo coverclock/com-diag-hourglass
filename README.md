@@ -13,7 +13,10 @@ ABSTRACT
 Hourglass is my implementation of a stratum-1 NTP server based on a Raspberry
 Pi 3 with a Uputronics GPS Board using the Ublox M8 chipset. Lots of people
 have done this before, although perhaps not exactly the way I cobbled it
-together. See the references below for pointers.
+together. See the references below for pointers. I more or less followded
+Eric Raymond's "Stratum-1-Microserver HOWTO" with a few changes here and
+there to either customize it for my network or to fix a minor issue here
+and there (e.g. his udev rule didn't work for me without modification).
 
 REFERENCES
 
@@ -75,21 +78,6 @@ NOTES
         --disable-dependency-tracking \
         --enable-ATOM \
         --enable-linuxcaps
-
-    sudo systemctl stop hciuart
-    sudo systemctl disable hciuart
-    sudo systemctl stop gpsd.socket
-    sudo systemctl disable gpsd.socket
-    sudo systemctl enable gpsd.service
-    sudo systemctl start gpsd.service
-
-    sudo apt -y install cpufrequtils
-    sudo systemctl disable ondemand
-    sudo echo 'GOVERNOR="performance"' >> /etc/default/cpufrequtils
-    sudo systemctl enable cpufrequtils
-    sudo systemctl restart cpufrequtils
-
-    cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
     sudo /usr/sbin/gpsd -b -n -N -D 5 /dev/gps0 /dev/pps0
 
