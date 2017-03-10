@@ -35,6 +35,8 @@ REFERENCES
 
 <https://github.com/ntp-project/ntp>
 
+<https://gitlab.com/NTPsec/ntpsec.git>
+
 CONTACT
 
 Chip Overclock  
@@ -50,6 +52,7 @@ NOTES
 
     scons \
     	timeservice=yes \
+        magic_hat=yes \
     	nmea0183=yes \
     	prefix="/usr" \
     	fixed_port_speed=9600 \
@@ -73,12 +76,20 @@ NOTES
         --enable-ATOM \
         --enable-linuxcaps
 
-    systemctl disable hciuart
-    systemctl stop hciuart
-    systemctl disable gpsd.socket
-    systemctl stop gpsd.socket
-    systemctl enable gpsd.service
-    systemctl start gpsd.service
+    sudo systemctl stop hciuart
+    sudo systemctl disable hciuart
+    sudo systemctl stop gpsd.socket
+    sudo systemctl disable gpsd.socket
+    sudo systemctl enable gpsd.service
+    sudo systemctl start gpsd.service
+
+    sudo apt -y install cpufrequtils
+    sudo systemctl disable ondemand
+    sudo echo 'GOVERNOR="performance"' >> /etc/default/cpufrequtils
+    sudo systemctl enable cpufrequtils
+    sudo systemctl restart cpufrequtils
+
+    cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
     sudo /usr/sbin/gpsd -b -n -N -D 5 /dev/gps0 /dev/pps0
 

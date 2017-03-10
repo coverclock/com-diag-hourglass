@@ -1,1 +1,0 @@
-KERNEL=="ttyAMA0", SYMLINK+="gps0"
