@@ -2,4 +2,7 @@
 ::1		localhost ip6-localhost ip6-loopback
 ff02::1		ip6-allnodes
 ff02::2		ip6-allrouters
-127.0.1.1	hourglass
+127.0.1.1       hourglass
+192.168.1.242   hourglass-lan
+192.168.1.243   hourglass-wlan
+192.168.1.237   mercury

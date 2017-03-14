@@ -18,6 +18,8 @@ Eric Raymond's "Stratum-1-Microserver HOWTO" with a few changes here and
 there to either customize it for my network or to fix a minor issue here
 and there (e.g. his udev rule didn't work for me without modification).
 
+Disclaimer: WORK IN PROGRESS!
+
 REFERENCES
 
 <https://www.ntpsec.org/white-papers/stratum-1-microserver-howto/>
