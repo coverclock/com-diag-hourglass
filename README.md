@@ -42,6 +42,18 @@ REFERENCES
 
 <https://gitlab.com/NTPsec/ntpsec.git>
 
+<https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi?view=all>
+
+<http://www.elevendroids.com/2012/12/setting-up-hardware-rtc-in-raspbian/>
+
+<https://blog.remibergsma.com/2013/05/08/adding-a-hardware-clock-rtc-to-the-raspberry-pi/>
+
+<https://afterthoughtsoftware.com/products/rasclock>
+
+<https://thepihut.com/blogs/raspberry-pi-tutorials/17209332-adding-a-real-time-clock-to-your-raspberry-pi>
+
+<https://www.raspberrypi.org/forums/viewtopic.php?t=85683>
+
 CONTACT
 
 Chip Overclock  
@@ -88,3 +100,42 @@ NOTES
     ntpq -p hourglass
 
     sudo ntpd -gdn
+
+    sudo date -u $(ssh jsloan@mercury bin/dateu)
+
+EXAMPLE
+
+    jsloan@mercury:~$ !ntpq
+    ntpq -c peer -c as -c rl hourglass
+         remote           refid      st t when poll reach   delay   offset  jitter
+    ==============================================================================
+    *SHM(1)          .PPS.            0 l    3   64  377    0.000  -76.235   5.814
+    xSHM(0)          .GPS.            0 l    2   64  377    0.000  -206.32   9.439
+    +ha82.smatwebdes 200.98.196.212   2 u   61   64  377   33.869  -78.555 100.580
+    +clockb.ntpjs.or 97.164.73.162    3 u    5   64  377   51.931  -78.499   5.904
+    -leeloo.scurvyne 128.4.1.1        4 u   49   64  373   64.860  -72.514   5.731
+    +mirror          216.93.242.12    3 u   53   64  377   44.566  -80.662   8.004
+    -unlawful.id.au  131.188.3.220    2 u   19   64  377   61.163  -68.225  30.522
+    +chl.la          216.218.254.202  2 u  125   64   32   46.733  -77.483  54.361
+    +195.21.152.161  193.62.22.74     2 u   43   64  377   62.572  -79.654   6.920
+    
+    ind assid status  conf reach auth condition  last_event cnt
+    ===========================================================
+      1 36480  961a   yes   yes  none  sys.peer    sys_peer  1
+      2 36481  911a   yes   yes  none falsetick    sys_peer  1
+      3 36482  8811   yes  none  none    reject    mobilize  1
+      4 36483  141a    no   yes  none candidate    sys_peer  1
+      5 36484  1414    no   yes  none candidate   reachable  1
+      6 36485  1314    no   yes  none   outlyer   reachable  1
+      7 36486  1424    no   yes  none candidate   reachable  2
+      8 36487  1324    no   yes  none   outlyer   reachable  2
+      9 36488  1414    no   yes  none candidate   reachable  1
+     10 36489  1424    no   yes  none candidate   reachable  2
+    associd=0 status=0415 leap_none, sync_uhf_radio, 1 event, clock_sync,
+    version="ntpd ntpsec-0.9.6+4149 2017-03-15T10:30:25-0400",
+    processor="armv7l", system="Linux/4.4.50-v7+", leap=00, stratum=1,
+    precision=-20, rootdelay=0.000, rootdisp=80.878, refid=PPS,
+    reftime=dc73e663.dea6cac5  Wed, Mar 15 2017 10:12:19.869,
+    clock=dc73e666.9f2621b9  Wed, Mar 15 2017 10:12:22.621, peer=36480, tc=6,
+    mintc=0, offset=-76.723, frequency=230.470, sys_jitter=3.189739,
+    clk_jitter=3.096846, clk_wander=5.393056
