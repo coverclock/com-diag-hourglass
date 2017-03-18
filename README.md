@@ -103,6 +103,10 @@ NOTES
 
     sudo date -u $(ssh jsloan@mercury bin/dateu)
 
+    sudo raspi-config
+
+    sudo apt-get install i2c-tools
+
 EXAMPLE
 
     jsloan@mercury:~$ !ntpq

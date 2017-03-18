@@ -2,3 +2,4 @@ i2c-dev
 pps-core
 pps-ldisc
 pps-gpio
+rtc-ds1307
