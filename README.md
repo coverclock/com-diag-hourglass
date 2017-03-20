@@ -54,6 +54,10 @@ REFERENCES
 
 <https://www.raspberrypi.org/forums/viewtopic.php?t=85683>
 
+<https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/overview>
+
+<https://github.com/adafruit/Adafruit_Python_CharLCD>
+
 CONTACT
 
 Chip Overclock  
@@ -106,6 +110,12 @@ NOTES
     sudo raspi-config
 
     sudo apt-get install i2c-tools
+
+    sudo apt-get install build-essential python-dev python-mmbus python-pip git
+    sudo pip install RPi.GPIO
+    git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git
+    cd Adafruit_Python_CharLCD
+    sudo python setup.py install
 
 EXAMPLE
 
