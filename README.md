@@ -58,6 +58,8 @@ REFERENCES
 
 <https://github.com/adafruit/Adafruit_Python_CharLCD>
 
+<https://docs.python.org/2/library/time.html>
+
 CONTACT
 
 Chip Overclock  
