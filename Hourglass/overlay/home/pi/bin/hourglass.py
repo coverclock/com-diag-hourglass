@@ -8,6 +8,7 @@ import Adafruit_CharLCD
 lcd = Adafruit_CharLCD.Adafruit_CharLCDPlate()
 
 lcd.clear()
+lcd.show_cursor(False)
 was = time.strftime("%a %Y-%b-%d\n %H:%M:%S %Z")
 while True:
 	now = time.strftime("%a %Y-%b-%d\n %H:%M:%S %Z")
