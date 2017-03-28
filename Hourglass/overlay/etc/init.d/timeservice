@@ -78,7 +78,7 @@ case $1 in
 		unlock_ntpdate
 		# Launch hourglass
 		log_daemon_msg "Starting hourglass daemon" "timeservice"
-		start-stop-daemon --start --quiet --oknodo --pidfile $PIDFILE3 --startas $DAEMON3 --make-pidfile --
+		start-stop-daemon --start --quiet --oknodo --pidfile $PIDFILE3 --startas $DAEMON3 --make-pidfile --background --
 		status=$?
 		log_end_msg $status
 		;;
