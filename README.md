@@ -36,6 +36,10 @@ clock, which will have been continuously synchronized via GPS and hence,
 over time, more accurate than the RTC. The RTC has a battery backup so
 that it maintains the time even if Hourglass is powered off.
 
+BLOG
+
+<http://coverclock.blogspot.com/2017/03/my-stratum-1-desk-clock.html>
+
 IMAGES
 
 <https://www.flickr.com/photos/johnlsloan/albums/72157681221591405>
