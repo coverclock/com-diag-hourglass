@@ -18,7 +18,23 @@ Eric Raymond's "Stratum-1-Microserver HOWTO" with a few changes here and
 there to either customize it for my network or to fix a minor issue here
 and there (e.g. his udev rule didn't work for me without modification).
 
-Disclaimer: WORK IN PROGRESS!
+OPERATION
+
+When the system boots up, the real-time hardware clock is read and the
+Linux system clock set to that time. This provides a usable system clock
+until the GPS board can establish a lock on enough satellites to compute
+a solution. The NTP daemon on Hourglass will keep the Linux system
+clock closely synchronized to UTC (GPST plus leap seconds) as provided
+by the GPS daemon. The GNU library will handle the conversion from UTC
+to local time, including any necessary Daylight Saving Time conversion,
+providing the system time zone is administered appropriately. A Python
+script runs in the background, polling the system clock five times a
+second, and updating the LCD using the Adafruit LCD library with the
+local date and time. If you press the SELECT button on the LCD board,
+the Python script updates the real-time hardware clock to the system
+clock, which will have been continuously synchronized via GPS and hence,
+over time, more accurate than the RTC. The RTC has a battery backup so
+that it maintains the time even if Hourglass is powered off.
 
 REFERENCES
 
