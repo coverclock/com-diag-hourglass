@@ -143,6 +143,16 @@ NOTES
     cd Adafruit_Python_CharLCD
     sudo python setup.py install
 
+    ntpq -c peer -c as -c rl localhost
+    # \b        reject (unreachable or otherwise unusable)
+    # x         falseticker (intersection algorithm)
+    # .	        excess
+    # -	        outlyer (cluster algorithm)
+    # +	        candidate
+    # #	        selected (but not amongst top six)
+    # *	        peer (primary reference)
+    # o	        PPS peer
+
 EXAMPLE
 
     jsloan@mercury:~$ !ntpq
@@ -179,3 +189,4 @@ EXAMPLE
     clock=dc73e666.9f2621b9  Wed, Mar 15 2017 10:12:22.621, peer=36480, tc=6,
     mintc=0, offset=-76.723, frequency=230.470, sys_jitter=3.189739,
     clk_jitter=3.096846, clk_wander=5.393056
+
