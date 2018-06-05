@@ -137,7 +137,7 @@ NOTES
 
     sudo apt-get install i2c-tools
 
-    sudo apt-get install build-essential python-dev python-mmbus python-pip git
+    sudo apt-get install build-essential python-dev python-smbus python-pip git
     sudo pip install RPi.GPIO
     git clone https://github.com/adafruit/Adafruit_Python_CharLCD.git
     cd Adafruit_Python_CharLCD
